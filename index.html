@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarker</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons-1.10.5/font/bootstrap-icons.min.css">
+</head>
+<body>
+    
+
+<section>
+    <div class="container">
+            <div class="text-center">
+                <h2 id="bookmarker">Bookmarker</h2>
+            </div>
+            <div class="border-bottom border-top py-4">
+                <div class="text-center">
+                <h3 class="fs-4 bg-primary-subtle border border-primary d-inline-block py-1 pe-2 rounded-1">
+                    <i class="bi bi-bookmark-fill p-1 pe-0 text-primary"></i>
+                    Bookmark your favorite sites 
+                </h3>
+                </div>
+                <div class="row mt-3 g-3 fw-bold">
+                    <div class="col-lg-4">
+                        <label for=" siteName" class="mb-2"><i class="bi bi-bookmarks-fill"></i> Site Name</label>
+                        <input type="text" class="form-control" placeholder="Site Name" id="siteName">
+                    </div>
+                    <div class="col-lg-8">
+                        <label for="siteURL" class="mb-2"><i class="bi bi-file-earmark-code-fill"></i> Site URL</label>
+                        <input type="text" class="form-control" placeholder="Enter a URL" id="siteURL">
+                    </div>
+                    
+                </div>
+                <div class="text-center py-3">
+                    <button onclick="addProdctar()" id="submit" btn="button" class="btn btn-outline-primary bg-primary-subtle px-5 fw-bold text-black">Submit</button>
+                </div>
+        </div>
+        <div class="py-3 scroll-bot">
+            <table  class="table table-bordered">
+                <thead >
+                    <th class="bg-light">Index</th>
+                    <th class="bg-light">Website Name</th>
+                    <th class="bg-light"><i class="bi bi-eye-fill"></i> Visit</th>
+                    <th class="bg-light"><i class="bi bi-trash2-fill"></i> Delete</th>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<div id="boxModal" class="boxModal position-fixed top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none ">
+<div class="boxModalSmall bg-body-secondary text-danger">
+<span></span>
+<span></span>
+<span></span>
+<div class="d-flex justify-content-end">
+    <i id="boxClose" class="bi bi-x-circle fs-3"></i>
+</div>
+<h5>Site Name or Url is not valid, Please follow the rules below : !</h5>
+<p><i class="bi bi-arrow-right-circle"></i> Site name must contain at least 3 characters</p>
+<p><i class="bi bi-arrow-right-circle"></i> Site URL must be a valid one</p>
+</div>
+</div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
